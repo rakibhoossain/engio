@@ -51,51 +51,17 @@
                     <div class="row">
                         <div class="col-xl-3 col-lg-2 d-flex align-items-center">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="" /></a>
+                                <a href="{{route('home')}}"><img src="assets/img/logo/logo-white.png" alt="" /></a>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-7">
                             <div class="main-menu text-center">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li class="active"><a href="index.html">home <i class="far fa-angle-down"></i></a>
-                                            <ul class="sub-menu text-left">
-                                                <li><a href="index.html">home 1</a></li>
-                                                <li><a href="index-2.html">home 2</a></li>
-                                                <li><a href="index-3.html">home 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="about-us.html">about</a> </li>
-                                        <li><a href="causes-01.html">Cases <i class="far fa-angle-down"></i></a>
-                                            <ul class="sub-menu text-left">
-                                                <li><a href="causes-01.html">cases 01</a></li>
-                                                <li><a href="causes-02.html">cases 02</a></li>
-                                                <li><a href="causes-details.html">causes details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="events.html">events <i class="far fa-angle-down"></i></a>
-                                            <ul class="sub-menu text-left">
-                                                <li><a href="events.html">events</a></li>
-                                                <li><a href="events-02.html">events 02</a></li>
-                                                <li><a href="events-details.html">events-details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="blog-grid.html">blog <i class="far fa-angle-down"></i></a>
-                                            <ul class="sub-menu text-left">
-                                                <li><a href="blog-grid.html">blog grid</a></li>
-                                                <li><a href="blog-standard.html">blog standard</a></li>
-                                                <li><a href="blog-details.html">blog details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages <i class="far fa-angle-down"></i></a>
-                                            <ul class="sub-menu text-left">
-                                                <li><a href="about-us.html">about us</a></li>
-                                                <li><a href="volunteer.html">volunteer</a></li>
-                                                <li><a href="faq.html">faq</a></li>
-                                                <li><a href="contact.html">contact</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">contact</a></li>
+                                        <li><a href="{{route('home')}}">হোম</a> </li>
+                                        <li><a href="{{route('coronavirus')}}">করোনা আপডেট </a> </li>
+                                        <li><a href="{{route('about')}}">আমাদের সম্পর্কে </a> </li>
+                                        <li><a href="{{route('contact')}}">যোগাযোগ করুন </a> </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -104,7 +70,7 @@
                             <div class="header-right">
                                 <div class="header-right-info f-right d-none d-lg-block">
                                     <div class="header-right-text text-right f-left">
-                                        <h5>Conatct Us</h5>
+                                        <h5>যোগাযোগ</h5>
                                         <span>+1234567899</span>
                                     </div>
                                     <div class="heder-right-icon f-right">
@@ -253,5 +219,6 @@
 
 
         <script src="{{asset('js/frontend.js')}}"></script>
+        @stack('scripts')
     </body>
 </html>

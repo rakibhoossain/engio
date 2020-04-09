@@ -1,9 +1,10 @@
 <?php
 
-
-Route::get('/', function () {
-    return view('frontend.index');
-});
+Route::get('/', 'FrontendController@index')->name('home');
+Route::get('/coronavirus', 'FrontendController@coronavirus')->name('coronavirus');
+Route::get('/coronavirus/{corona}', 'FrontendController@coronavirusSingle')->name('coronavirus.single');
+Route::get('/about', 'FrontendController@about')->name('about');
+Route::get('/contact', 'FrontendController@contact')->name('contact');
 
 
 // Route::redirect('/', '/login');
@@ -30,4 +31,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('products/destroy', 'ProductsController@massDestroy')->name('products.massDestroy');
 
     Route::resource('products', 'ProductsController');
+
+    Route::resource('corona', 'CoronaController');
+    Route::delete('corona/destroy', 'CoronaController@massDestroy')->name('corona.massDestroy');
+
 });
